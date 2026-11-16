@@ -63,7 +63,7 @@ Site şu anda Netlify üzerinde `*.netlify.app` alt alan adıyla yayında. Günc
 
 ## Proje durumu ve sonraki adımlar
 
-- [ ] **Alan adı (domain):** Site için özel bir alan adı alınacak ve Netlify'a bağlanacak (DNS ayarları + otomatik SSL). Bu adım için **site sahibinin onayı bekleniyor.**
+- [ ] **Alan adı (domain):** Site için özel bir alan adı alınacak ve Netlify'a bağlanacak (DNS ayarları + otomatik SSL).Klinik şu anda inşaat aşamasında olduğundan, alan adı alımı inşaatın tamamlanmasının ardından yapılacak.
 - [ ] Unsplash görsellerinin kliniğin kendi fotoğraflarıyla değiştirilmesi
 - [ ] Google İşletme Profili ve Google Haritalar konumunun siteye bağlanması
 - [x] Tüm içerik bölümlerinin tamamlanması
