@@ -1,71 +1,71 @@
-# Aybala Ören Diş Kliniği – Web Sitesi
+# Aybala Ören Dental Clinic – Website
 
-Kozan / Adana'daki Aybala Ören Diş Kliniği için geliştirdiğim, tek sayfalık (single-page), responsive bir tanıtım sitesi.
+A single-page, responsive website I built for Aybala Ören Dental Clinic in Kozan, Adana, Türkiye. The site content is in Turkish.
 
-Projede herhangi bir framework, build aracı ya da harici kütüphane kullanmadım. Site saf HTML5, CSS3 ve vanilla JavaScript ile yazıldı ve statik dosya olarak sunuluyor.
+I didn't use any framework, build tool or JavaScript library. The site is written in plain HTML5, CSS3 and vanilla JavaScript and served as static files.
 
-## Özellikler
+## Features
 
-- **Responsive tasarım:** Masaüstü, tablet ve mobil için `@media` sorgularıyla ayrı düzenler (kırılma noktaları: 1000px ve 820px)
-- **Mobil menü:** 820px altında hamburger menüye dönüşen, JavaScript ile açılıp kapanan tam ekran navigasyon
-- **Sabit (fixed) navigasyon:** Sayfa kaydırıldığında arka planı koyulaşan üst menü (`scroll` event listener)
-- **Bölümler arası yumuşak geçiş:** `scroll-behavior: smooth` ve sabit menünün içeriği örtmemesi için `scroll-margin-top`
-- **WhatsApp entegrasyonu:** `wa.me` bağlantısı ile sabit konumlu randevu butonu
-- **Tıklanabilir telefon:** Mobilde doğrudan arama başlatan `tel:` bağlantısı
-- **Harita bağlantısı:** Google Maps arama URL'i ile adres yönlendirmesi
-- **Performans:** Ekran dışındaki görsellerde `loading="lazy"`, görseller web için yeniden boyutlandırıldı
-- **SEO temelleri:** `lang="tr"`, `meta description`, anlamlı başlık hiyerarşisi ve tüm görsellerde `alt` metinleri
-- **Erişilebilirlik:** Simge butonlarında `aria-label`, dekoratif SVG'lerde `aria-hidden`
+- **Responsive design:** separate layouts for desktop, tablet and mobile using `@media` queries (breakpoints at 1000px and 820px)
+- **Mobile menu:** below 820px the navigation collapses into a hamburger menu that opens a full-screen overlay, toggled with JavaScript
+- **Fixed navigation:** the top bar gets a darker background once the page is scrolled (`scroll` event listener)
+- **Smooth in-page navigation:** `scroll-behavior: smooth`, plus `scroll-margin-top` so the fixed header doesn't cover section headings
+- **WhatsApp integration:** a fixed appointment button linking to `wa.me`
+- **Click-to-call:** a `tel:` link that starts a call directly on mobile
+- **Map link:** the address opens in Google Maps through a search URL
+- **Performance:** `loading="lazy"` on off-screen images; all images resized for the web
+- **SEO basics:** `lang="tr"`, a meta description, a meaningful heading hierarchy and `alt` text on every image
+- **Accessibility:** `aria-label` on icon-only buttons, `aria-hidden` on decorative SVGs
 
-## Sayfa yapısı
+## Page Structure
 
-| Bölüm | İçerik |
+| Section | Content |
 |---|---|
-| Hero | Tam ekran görsel, gradyan overlay, başlık ve CTA |
-| Hizmetler | Genel, estetik ve çocuk diş hekimliği (inline SVG ikonlar) |
-| Tedaviler | Kanal tedavisi, dolgu, beyazlatma, diş çekimi, zirkonyum |
-| Galeri | 4 sütunlu CSS Grid (mobilde 2 sütun) |
-| Hakkımızda | Hekim biyografisi, eğitim bilgileri, kurslar ve kongreler |
-| Randevu (CTA) | WhatsApp yönlendirmesi |
-| İletişim | Adres, telefon, çalışma saatleri |
+| Hero | Full-screen image, gradient overlay, headline and CTA |
+| Services | General, cosmetic and pediatric dentistry (inline SVG icons) |
+| Treatments | Root canal, fillings, whitening, extraction, zirconia crowns |
+| Gallery | 4-column CSS Grid (2 columns on mobile) |
+| About | Dentist biography, education, courses and congresses |
+| Appointment (CTA) | WhatsApp redirect |
+| Contact | Address, phone, opening hours |
 
-## Teknolojiler
+## Tech Stack
 
-- **HTML5**: semantik etiketler (`header`, `nav`, `section`, `footer`)
-- **CSS3**: CSS değişkenleri (custom properties), Flexbox, CSS Grid, `clamp()` ile akışkan tipografi, `aspect-ratio`, `object-fit`
-- **JavaScript (vanilla)**: menü ve scroll davranışları
-- **Google Fonts**: Cormorant Garamond (başlıklar), Jost (metin)
-- **Görseller**: Unsplash Lisansı kapsamında telifsiz fotoğraflar
-- **Hosting**: Netlify (statik deploy)
+- **HTML5:** semantic elements (`header`, `nav`, `section`, `footer`)
+- **CSS3:** custom properties, Flexbox, CSS Grid, fluid typography with `clamp()`, `aspect-ratio`, `object-fit`
+- **JavaScript (vanilla):** menu and scroll behavior
+- **Google Fonts:** Cormorant Garamond (headings), Jost (body text)
+- **Images:** royalty-free photos under the Unsplash License
+- **Hosting:** Netlify (static deploy)
 
-## Dosya yapısı
+## File Structure
 
 ```
-├── index.html      # Sayfa yapısı ve içerik
-├── style.css       # Tasarım, renk değişkenleri ve responsive kurallar
-├── images/         # Optimize edilmiş görseller
+├── index.html      # Page structure and content
+├── style.css       # Styles, color variables and responsive rules
+├── images/         # Optimized images
 └── README.md
 ```
 
-## Yerelde çalıştırma
+## Running Locally
 
-Kurulum gerekmiyor. `index.html` dosyasını doğrudan tarayıcıda açmak yeterli. İstenirse basit bir yerel sunucuyla da çalıştırılabilir:
+No installation needed: opening `index.html` in a browser is enough. You can also serve it with a simple local server:
 
 ```bash
 python3 -m http.server 5500
 ```
 
-Ardından tarayıcıda `http://localhost:5500` adresine gidilir.
+Then open `http://localhost:5500` in your browser.
 
-## Yayın
+## Deployment
 
-Site şu anda Netlify üzerinde `*.netlify.app` alt alan adıyla yayında. Güncellemeler, dosyaların Netlify'a yeniden deploy edilmesiyle yayına alınıyor.
+The site is currently live on Netlify under a `*.netlify.app` subdomain. Updates go live by redeploying the files to Netlify.
 
-## Proje durumu ve sonraki adımlar
+## Project Status & Next Steps
 
-- [ ] **Alan adı (domain):** Site için özel bir alan adı alınacak ve Netlify'a bağlanacak (DNS ayarları + otomatik SSL).Klinik şu anda inşaat aşamasında olduğundan, alan adı alımı inşaatın tamamlanmasının ardından yapılacak.
-- [ ] Unsplash görsellerinin kliniğin kendi fotoğraflarıyla değiştirilmesi
-- [ ] Google İşletme Profili ve Google Haritalar konumunun siteye bağlanması
-- [x] Tüm içerik bölümlerinin tamamlanması
-- [x] Mobil uyumluluk
-- [x] WhatsApp ve telefon entegrasyonu
+- [ ] **Custom domain:** buy a domain for the site and connect it to Netlify (DNS settings + automatic SSL). **Waiting for the site owner's approval.** The clinic is still under construction, so the domain will be purchased once construction is finished.
+- [ ] Replace the Unsplash photos with the clinic's own photos
+- [ ] Link the site to the clinic's Google Business Profile and Google Maps location
+- [x] Complete all content sections
+- [x] Mobile responsiveness
+- [x] WhatsApp and phone integration
